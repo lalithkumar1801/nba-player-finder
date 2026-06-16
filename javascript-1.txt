@@ -1,0 +1,40 @@
+HTML structure-
+<!DOCTYPE html> -  tells the browser this is an HTML5 doc
+<html> - root of the webpage
+<body> - contains everything visible on the page
+
+Heading-
+<h2>What can JavaScript Do?</h2>
+
+Output- What Can JavaScript Do?
+h2 means level-2 heading
+
+
+Paragraphs-
+<p>JavaScript can change HTML attribute values.</p>
+
+First Button-
+<button
+onclick="document.getElementsById('myImage').src='pic_bulbon.gif'">
+Turn on the light
+</button>
+
+onclick- Run this JavaScript code when the button is clicked.
+id="myImage" (bulb image)
+
+
+Reg image-
+<img id="myImage"
+src="pic_bulboff.gif"
+style="width:100px"> - this displays the bulb image
+
+
+
+
+
+
+
+
+
+
+HTML → CSS → JavaScript → DOM → React → Node.js → Full-Stack Developer 🚀

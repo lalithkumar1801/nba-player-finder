@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <input type="text" id="namebox" oninput="showText()">
+        <h1 id="demo"></h1>
+
+        <script>
+            function showText() {
+                let name=document.getElementById("namebox").value;
+                document.getElementById("demo").innerHTML="Hello " + name;
+                
+            }
+        </script>
+    </body>
+</html>

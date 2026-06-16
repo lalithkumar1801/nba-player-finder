@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 20px;
+                border: 2px solid black;
+                width: 500px;
+            }
+            body {
+                background-color: lightyellow;
+            }
+            .title {
+                color: maroon;
+                font-size: 40px;
+                text-align: center;
+            }
+            #namebox {
+                font-size: 20px;
+                padding: 10px;
+            }
+            button {
+                font-size: 18px;
+                padding: 10px;
+            }
+            #demo {
+                color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="card">
+
+        <h1 class="title">NBA Player Finder</h1>
+        <input type="text" id="namebox">
+        <button onclick="ShowPlayer()">Find Player</button>
+        <h1 id="demo"></h1>
+
+        </div>        
+
+        <script>
+
+            let players= [
+                {
+                    name: "Stephen Wardell Curry",
+                    team: "Golden State Warriors",
+                    age: 37
+                },
+                {
+                    name: "Victor Wembanyama",
+                    team: "San Antonio Spurs",
+                    age: 23
+                },
+                {
+                    name: "Udonis Haslem",
+                    team: "Miami Heat",
+                    age: 43
+                }
+            ]
+
+            function ShowPlayer() {
+                let name=document.getElementById("namebox").value;
+                let found= false;
+
+                for(let i=0; i<players.length; i++) {
+                    if(name == players[i].name) {
+                         document.getElementById("demo").innerHTML= players[i].name + " plays for " + players[i].team + " and is " + players[i].age + " years old ";
+                         found= true;
+                    }
+                   
+                }
+
+                if(found == false) {
+                    document.getElementById("demo").innerHTML= "Player Not Found";
+                }
+            }
+        </script>
+    </body>
+</html>

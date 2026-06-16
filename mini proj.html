@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <input type="Player" id="namebox" oninput="ShowPlayer()">
+        <h1 id="demo"></h1>
+        <script>
+            let players = [
+    {
+        name: "Curry",
+        team: "Warriors"
+    },
+    {
+        name: "Wembanyama",
+        team: "Spurs"
+    },
+    {
+        name: "Fox",
+        team: "Kings"
+    }
+];
+
+function ShowPlayer() {
+    let name=document.getElementById("namebox").value;
+    let found= false;
+
+    for(let i=0; i<players.length; i++) {
+
+        if(name == players[i].name) {
+            document.getElementById("demo").innerHTML=players[i].name + " plays for " + players[i].team;
+            found= true;
+            break;
+        }
+    }
+
+    if(found == false) {
+        document.getElementById("demo").innerHTML="Player Not Found";
+    }
+}
+
+        </script>
+
+    </body>
+</html>
