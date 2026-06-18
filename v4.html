@@ -10,6 +10,12 @@
                 padding: 20px;
                 border: 2px solid black;
                 width: 500px;
+
+                width: 500px;
+                margin: auto;
+                padding: 20px;
+                border: 2px solid black;
+                background-color: white;
             }
             body {
                 background-color: lightyellow;
@@ -29,7 +35,24 @@
             }
             #demo {
                 color: green;
+                font-size: 30px;
+                text-align: center;
+                
             }
+
+            @media (max-width: 600px) {
+                .card {
+                   width: 95%;
+                }
+
+                .title {
+                   font-size: 25px;
+                }
+
+                #namebox {
+                    width: 90%;
+                }
+}
         </style>
     </head>
 
@@ -40,7 +63,7 @@
         <h1 class="title">NBA Player Finder</h1>
         <input type="text" id="namebox">
         <button onclick="ShowPlayer()">Find Player</button>
-        <h1 id="demo"></h1>
+        <p id="demo"></p>
 
         </div>        
 
